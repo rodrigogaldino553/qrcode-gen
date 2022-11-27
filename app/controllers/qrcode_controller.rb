@@ -14,11 +14,12 @@ class QrcodeController < ApplicationController
       module_px_size: 6,
       resize_exactly_to: false,
       resize_gte_to: false,
-      size: 120
+      size: 300
     )
     random_code = SecureRandom.hex(8)
     @qrcode_src = "/generated/github-qrcode#{random_code}.png"
     IO.binwrite("public#{@qrcode_src}", png.to_s)
+    # cleaup this file after some seconds timeout
 
     # arrumar um jeito de enviar como api aqui
 
