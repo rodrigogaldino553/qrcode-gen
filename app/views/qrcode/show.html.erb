@@ -1,12 +1,26 @@
-<h1>Here's your QRCODE!</h1>
-<h2>Share it anywhere</h2>
-<style>
-  .black{
-    background: black;
-  }
-  .white{
-    background: white;
-  }
-</style>
-
-<%= image_tag src: @qrcode_src %>
+<div class="mt-18 flex flex-col w-full h-full justify-center items-center">
+  <div class="text-center">
+    <h1 class="text-2xl">Here's your QRCODE!</h1>
+    <h2>Share it anywhere</h2>
+    <div class="mb-2 flex flex-col justify-center items-center">
+      <img src="<%= @qrcode_src %>">
+      <div class="flex justify-center items-center">
+        <ul class="flex space-x-2">
+          <li>
+            <a href="#">Download</a>
+          </li>
+          <li>
+            <a href="#">Print</a>
+          </li>
+          <li>
+            <a href="#">Whatsapp</a>
+          </li>
+          <li>
+            <a href="#">Intagram</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <%= link_to 'Generate new QRCode', qrcode_new_path, class: '' %>
+  </div>
+</div>
