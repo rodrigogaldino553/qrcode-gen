@@ -19,6 +19,12 @@ class QrcodeController < ApplicationController
     random_code = SecureRandom.hex(8)
     @qrcode_src = "/generated/github-qrcode#{random_code}.png"
     IO.binwrite("public#{@qrcode_src}", png.to_s)
+    
+    respond_to do |format|
+      format.html { render :show, notice: "Your QRCode was GRACEFFULY generated!" }
+      format.json { qrcode_src: @qrcode_src, status: :ok }
+    end
+    
     # cleaup this file after some seconds timeout
 
     # arrumar um jeito de enviar como api aqui
