@@ -1,0 +1,12 @@
+<h1>Generate a new QRCODE down below!</h1>
+
+<%= form_tag :qrcode_show, method: :get do |f| %>
+  <div class="field">
+    <%= label_tag "Text or URL" %>
+    <%= text_field_tag :content, nil, required: true, placeholder: 'https://example.com' %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag "Generate QRCODE" %>
+  </div>
+<% end %>
