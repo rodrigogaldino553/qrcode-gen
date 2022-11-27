@@ -32,3 +32,5 @@ end
 gem "chunky_png", "~> 1.4"
 
 gem "rqrcode", "~> 2.1"
+
+gem "tailwindcss-rails", "~> 2.0"

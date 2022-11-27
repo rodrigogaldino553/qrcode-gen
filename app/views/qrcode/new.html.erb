@@ -1,12 +1,14 @@
-<h1>Generate a new QRCODE down below!</h1>
+<div class="flex flex-col w-full h-full content-center items-center">
+  <h1 class="text-2xl mb-12">Generate a new QRCODE!</h1>
 
-<%= form_tag :qrcode_show, method: :get do |f| %>
-  <div class="field">
-    <%= label_tag "Text or URL" %>
-    <%= text_field_tag :content, nil, required: true, placeholder: 'https://example.com' %>
-  </div>
+  <%= form_tag :qrcode_show, method: :get, class: '' do |f| %>
+    <div class="field flex flex-col text-center">
+      <%= label_tag 'enter your text or url', nil, class: 'text-gray-500' %>
+      <%= text_field_tag :content, nil, required: true, placeholder: 'https://example.com', class: 'rounded-md' %>
+    </div>
 
-  <div class="actions">
-    <%= submit_tag "Generate QRCODE" %>
-  </div>
-<% end %>
+    <div class="actions mt-4">
+      <%= submit_tag 'Generate QRCODE', class: 'px-4 py-2 w-full bg-blue-500 text-white rounded-md' %>
+    </div>
+  <% end %>
+</div>
