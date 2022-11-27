@@ -3,8 +3,6 @@ class QrcodeController < ApplicationController
   end
 
   def show
-    # send_data RQRCode::QRCode.new(params[:content].to_s).as_png(size: 300), type: 'image/png', disposition: 'attachment'
-    # @qrcode_html = RQRCode::QRCode.new(params[:content].to_s).as_html
     qrcode = RQRCode::QRCode.new(params[:content].to_s)
     png = qrcode.as_png(
       bit_depth: 1,
