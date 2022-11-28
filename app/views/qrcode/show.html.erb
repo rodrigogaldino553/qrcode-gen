@@ -2,25 +2,33 @@
   <div class="text-center">
     <h1 class="text-2xl">Here's your QRCODE!</h1>
     <h2>Share it anywhere</h2>
-    <div class="mb-2 flex flex-col justify-center items-center">
-      <img src="<%= @qrcode %>">
+    <div class="mb-2 pb-4 flex flex-col justify-center items-center shadow-lg rounded-md">
+      <img src="<%= @qrcode %>" alt="generated qrcode">
       <div class="flex justify-center items-center">
         <ul class="flex space-x-2">
           <li>
-            <a href="#">Download</a>
+            <%= link_to @qrcode, download: 'generated-qrcode', class: 'bg-blue-500 focus:bg-blue-800 hover:text-blue-800 rounded-full', width: '100px', height: '100px' do %>
+              <%= image_tag asset_path('download.png'), alt: 'download' %>
+            <% end %>
           </li>
           <li>
-            <a href="#">Print</a>
+            <%= link_to @qrcode, download: 'generated-qrcode', class: 'bg-blue-500 focus:bg-blue-800 hover:text-blue-800 rounded-full', width: '100px', height: '100px' do %>
+              <%= image_tag asset_path('print.png'), alt: 'print' %>
+            <% end %>
           </li>
           <li>
-            <a href="#">Whatsapp</a>
+            <%= link_to @qrcode, download: 'generated-qrcode', class: 'bg-blue-500 focus:bg-blue-800 hover:text-blue-800 rounded-full', width: '100px', height: '100px' do %>
+              <%= image_tag asset_path('zapzap.png'), alt: 'whatsapp' %>
+            <% end %>
           </li>
           <li>
-            <a href="#">Intagram</a>
+            <%= link_to @qrcode, download: 'generated-qrcode', class: 'bg-blue-500 focus:bg-blue-800 hover:text-blue-800 rounded-full', width: '100px', height: '100px' do %>
+              <%= image_tag asset_path('insta.png'), alt: 'insta' %>
+            <% end %>
           </li>
         </ul>
       </div>
     </div>
-    <%= link_to 'Generate new QRCode', qrcode_new_path, class: '' %>
+    <%= link_to 'Generate new QRCode', qrcode_new_path, class: 'text-blue-500 focus:text-blue-800 hover:text-blue-800' %>
   </div>
 </div>

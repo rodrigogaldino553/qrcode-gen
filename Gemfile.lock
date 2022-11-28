@@ -169,7 +169,6 @@ DEPENDENCIES
   rqrcode (~> 2.1)
   sprockets-rails
   tailwindcss-rails (~> 2.0)
-  tzinfo-data
 
 RUBY VERSION
    ruby 3.1.2p20
