@@ -22,7 +22,7 @@ class QrcodeController < ApplicationController
     
     respond_to do |format|
       format.html { render :show, notice: "Your QRCode was GRACEFFULY generated!" }
-      format.json { qrcode_src: @qrcode_src, status: :ok }
+      format.json { render @qrcode_src, status: :ok }
     end
     
     # cleaup this file after some seconds timeout
