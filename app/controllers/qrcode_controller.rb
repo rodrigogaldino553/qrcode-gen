@@ -16,7 +16,7 @@ class QrcodeController < ApplicationController
       resize_gte_to: false,
       size: 300
     )
-    png_name = "qrcode-#{SecureRandom.hex(32)}.png"
+    png_name = "#{SecureRandom.hex(32)}.png"
     qrcode_src = "generated/#{png_name}"
     @qrcode = "/#{qrcode_src}"
 
