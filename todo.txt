@@ -1,0 +1,16 @@
+Yeah baby ;)
+
+an web app to generate&show qrcode
+an ionic mobile app to generate and read qrcodes
+
+
+- STEPS
+  * Build simple rails app without styled views to generate and show qrcodes
+  * adapt it to works also like an api
+  * build a basic mobile app to generete and show qrcodes
+    * add feature to read others qrcodes
+
+  * estilizar paginas com bootstrap
+  * build a landing page presenting the idea...
+  * add specs
+  * colocar tema noturno
