@@ -7,7 +7,27 @@
       <a href="#">about us</a>
     </li>
     <li>
-      <a href="#">dark</a>
+      <button id="color-mode" class="p-4 rounded-full bg-gray-300 light">
+        <%= image_tag asset_path('dark-mode.png'), width: '25px', height: '25px' %>
+      </button>
     </li>
   </ul>
 </div>
+
+<script>
+  let mode_btn = document.getElementById('color-mode')
+  mode_btn.addEventListener('click', (e) => {
+    mode_btn.classList.toggle('light')
+    mode_btn.classList.toggle('dark')
+
+    color_mode()
+  })
+
+  function color_mode() {
+    // change colors schema here
+
+
+    alert(`NOW! you're on ${mode_btn.classList[mode_btn.classList.length -1]} mode!`)
+  }
+
+</script>
