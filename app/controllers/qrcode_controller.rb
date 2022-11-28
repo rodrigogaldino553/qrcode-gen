@@ -16,13 +16,15 @@ class QrcodeController < ApplicationController
       resize_gte_to: false,
       size: 300
     )
-    random_code = SecureRandom.hex(8)
-    @qrcode_src = "/generated/github-qrcode#{random_code}.png"
-    IO.binwrite("public#{@qrcode_src}", png.to_s)
+    png_name = "qrcode-#{SecureRandom.hex(8)}.png"
+    qrcode_src = "generated/#{png_name}"
+    @qrcode = "/#{qrcode_src}"
+
+    IO.binwrite("public/#{qrcode_src}", png.to_s)
     
     respond_to do |format|
+      format.json { render :json => {qrcode: "#{root_url}#{qrcode_src}"}, status: :ok }
       format.html { render :show, notice: "Your QRCode was GRACEFFULY generated!" }
-      format.json { render @qrcode_src, status: :ok }
     end
     
     # cleaup this file after some seconds timeout
