@@ -2,32 +2,4 @@
   <%= link_to qrcode_new_path do %>
     <%= image_tag asset_path('icons8-barcode-48.png'), size: 24 %>
   <% end %>
-  <ul class="w-full flex flex-row justify-end space-x-3">
-    <li>
-      <a href="#">about us</a>
-    </li>
-    <li>
-      <button id="color-mode" class="p-1 rounded-full bg-gray-300 light">
-        <%= image_tag asset_path('dark-mode.png'), width: '25px', height: '25px' %>
-      </button>
-    </li>
-  </ul>
 </div>
-
-<script>
-  let mode_btn = document.getElementById('color-mode')
-  mode_btn.addEventListener('click', (e) => {
-    mode_btn.classList.toggle('light')
-    mode_btn.classList.toggle('dark')
-
-    color_mode()
-  })
-
-  function color_mode() {
-    // change colors schema here
-
-
-    alert(`NOW! you're on ${mode_btn.classList[mode_btn.classList.length -1]} mode!`)
-  }
-
-</script>
