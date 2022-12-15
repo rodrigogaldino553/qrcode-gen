@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+.qr-actions li{
+  background: gray;
+  border-radius: 12px;
+  padding: 2px;
+  margin: 5px 2px;
+ }
+
+ .qr-actions li img{
+  width: 64px;
+  height: 64px;
+ }
