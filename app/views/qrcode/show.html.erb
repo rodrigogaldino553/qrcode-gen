@@ -2,7 +2,7 @@
   <div class="text-center">
     <h1 class="text-2xl">Here's your QRCODE!</h1>
     <h2>Share it anywhere</h2>
-    <div class="mb-2 pb-4 flex flex-col justify-center items-center shadow-lg rounded-md">
+    <div class="mb-2 pb-4 flex flex-col justify-center items-center shadow-lg rounded-md" style="box-shadow: 2px 2px 5px black; padding: 4px;">
       <img src="<%= @qrcode %>" alt="generated qrcode">
       <div class="flex justify-center items-center">
         <ul class="flex space-x-2 qr-actions">
@@ -14,16 +14,6 @@
           <li>
             <%= link_to @qrcode, download: 'generated-qrcode', class: 'bg-blue-500 focus:bg-blue-800 hover:text-blue-800 rounded-full', width: '100px', height: '100px' do %>
               <%= image_tag asset_path('print.png'), alt: 'print' %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to @qrcode, download: 'generated-qrcode', class: 'bg-blue-500 focus:bg-blue-800 hover:text-blue-800 rounded-full', width: '100px', height: '100px' do %>
-              <%= image_tag asset_path('zapzap.png'), alt: 'whatsapp' %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to @qrcode, download: 'generated-qrcode', class: 'bg-blue-500 focus:bg-blue-800 hover:text-blue-800 rounded-full', width: '100px', height: '100px' do %>
-              <%= image_tag asset_path('insta.png'), alt: 'insta' %>
             <% end %>
           </li>
         </ul>
