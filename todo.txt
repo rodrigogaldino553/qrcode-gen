@@ -9,6 +9,8 @@ an ionic mobile app to generate and read qrcodes
   * adapt it to works also like an api
   * build a basic mobile app to generete and show qrcodes
     * add feature to read others qrcodes
+  * dockerize it bitch
+  * deplpy to aws
 
   * estilizar paginas com bootstrap
   * build a landing page presenting the idea...
